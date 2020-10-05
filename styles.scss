@@ -1,0 +1,76 @@
+$mainColor: #000;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  height: 100vh;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 15%;
+  height: auto;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin-top: 2rem;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: $mainColor;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-family: "Montserrat";
+}
+.home-container {
+  display: flex;
+  justify-content: center;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-title {
+  font-family: "Montserrat";
+  font-size: 1.6rem;
+}
+.text-description {
+  font-family: "Montserrat";
+  padding: 15px;
+  margin: 0 0 0 15px;
+}
+.home-photo-container {
+  width: 400px;
+  height: 400px;
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 0, 0, 0) 50%,
+      rgb(255, 255, 255) 90%
+    ),
+    url(./images/mainphoto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  // position: relative;
+  // overflow: hidden;
+  // border-radius: 50%;
+}
+// .home-photo-container img {
+//   display: inline;
+//   margin: 0 auto;
+//   margin-left: -25%; //centers the image
+//   height: 100%;
+//   width: auto;
+//   background: linear-gradient(red, green);
+// }
