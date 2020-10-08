@@ -30,6 +30,12 @@ nav {
 
 @media (max-width: 992px) {
   nav img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  nav img {
     height: 100px;
   }
 }
@@ -67,6 +73,12 @@ nav {
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-links {
+    width: 70%;
   }
 }
 
@@ -237,6 +249,114 @@ nav {
   .home-photo-container {
     width: 300px;
     height: 300px;
+  }
+}
+
+#portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.glider-contain {
+  width: 90vh;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .glider-contain {
+    width: 60vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .glider-contain {
+    width: 35vh;
+  }
+}
+
+.card {
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  margin: 20px;
+  padding: 15px;
+}
+
+.card-title {
+  font-family: "Montserrat";
+  font-size: 1.3rem;
+}
+
+.card-description {
+  font-family: "Montserrat";
+  font-size: 0.8rem;
+  margin: 20px 0 20px 0;
+}
+
+.card-link {
+  font-family: "Montserrat";
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.card-photo {
+  width: 170px;
+  height: 170px;
+  background-image: url(./images/project.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 30px;
+}
+
+.glider-prev {
+  margin-top: 25px;
+  margin-left: -100px;
+}
+
+@media (max-width: 768px) {
+  .glider-prev {
+    margin-left: -30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .glider-prev {
+    margin-left: -15px;
+  }
+}
+
+.glider-next {
+  margin-top: 25px;
+  margin-right: -100px;
+}
+
+@media (max-width: 768px) {
+  .glider-next {
+    margin-right: -30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .glider-next {
+    margin-right: -15px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
