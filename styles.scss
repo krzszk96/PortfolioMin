@@ -1,9 +1,23 @@
+//colors
 $mainColor: #000;
+//responsive breakpoints
+$breakpoint-largedesktop: 1200px;
+$breakpoint-desktops: 992px;
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 360px;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @media (max-width: $breakpoint-tablet) {
+    overflow-x: hidden;
+  }
 }
 section {
   height: 100vh;
@@ -12,24 +26,99 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+nav img {
+  @media (max-width: $breakpoint-desktops) {
+    height: 100px;
+  }
+}
 .nav-links {
   display: flex;
   justify-content: space-around;
   width: 50%;
   margin-top: 2rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    position: absolute;
+    right: 0%;
+    top: 5vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
 }
+.nav-active {
+  transform: translateX(0%);
+}
+
 .nav-links li {
   list-style: none;
+
+  @media (max-width: $breakpoint-tablet) {
+    opacity: 0;
+  }
 }
 .nav-links a {
   color: $mainColor;
   text-decoration: none;
   letter-spacing: 3px;
   font-family: "Montserrat";
+
+  @media (max-width: $breakpoint-desktops) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: $breakpoint-tablet) {
+  }
+}
+.burger {
+  display: none;
+  margin: 4vh 4vh 0 0;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+    cursor: pointer;
+  }
+}
+.burger div {
+  width: 30px;
+  height: 1px;
+  margin: 7px;
+  background-color: $mainColor;
+  transition: all 0.3s ease;
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 .home-container {
   display: flex;
   justify-content: center;
+
+  @media (max-width: $breakpoint-desktops) {
+    margin-top: 50px;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .text-container {
   display: flex;
@@ -39,11 +128,17 @@ nav {
 .text-title {
   font-family: "Montserrat";
   font-size: 1.6rem;
+  @media (max-width: $breakpoint-desktops) {
+    font-size: 1.3rem;
+  }
 }
 .text-description {
   font-family: "Montserrat";
   padding: 15px;
   margin: 0 0 0 15px;
+  @media (max-width: $breakpoint-desktops) {
+    font-size: 0.8rem;
+  }
 }
 .home-photo-container {
   width: 400px;
@@ -58,15 +153,9 @@ nav {
   background-size: cover;
   background-position: center;
   border-radius: 50%;
-  // position: relative;
-  // overflow: hidden;
-  // border-radius: 50%;
+
+  @media (max-width: $breakpoint-desktops) {
+    width: 300px;
+    height: 300px;
+  }
 }
-// .home-photo-container img {
-//   display: inline;
-//   margin: 0 auto;
-//   margin-left: -25%; //centers the image
-//   height: 100%;
-//   width: auto;
-//   background: linear-gradient(red, green);
-// }
